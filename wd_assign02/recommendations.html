@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recommendations - Famtime</title>
+    <link href="design/css/stylesheet.css" rel="stylesheet">
+    <script src="design/js/script.js"></script>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+
+    <nav class="navbar">
+        <div class="nav-logo">
+            <a href="index.html">Famtime</a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="restaurants.html">Restaurants</a></li>
+            <li><a href="recommendations.html" class="active">Recommendations</a></li>
+            <li><a href="reservation.html">Reservations</a></li>
+            <li><a href="register.html">Sign Up</a></li>
+        </ul>
+    </nav>
+
+    <main>
+
+        <h1>Let us help you choose</h1>
+        <p>Not sure where to go? Answer a few quick questions and we'll match you with the right restaurant.</p>
+
+        <hr>
+
+        <section class="section-recommend">
+            <div class="recommend-form-wrap">
+                <h2>Tell us your preferences</h2>
+
+                <!-- Recommendation Form (dietary selection) -->
+
+                <form id="recommend-form">
+
+                    <div class="form-group">
+                        <label for="dietary-pref">Dietary Preference</label>
+                        <select id="dietary-pref" name="dietary-pref">
+                            <option value="">-- Select --</option>
+                            <option value="none">No preference</option>
+                            <option value="vegan">Vegan</option>
+                            <option value="halal">Halal</option>
+                        </select>
+                    </div>
+
+                    <!-- Recommendation Form (budget selection) -->
+
+                    <div class="form-group">
+                        <label for="budget-range">Budget per Person</label>
+                        <select id="budget-range" name="budget-range">
+                            <option value="">-- Select --</option>
+                            <option value="low">Under $30</option>
+                            <option value="mid">$30 – $60</option>
+                            <option value="high">$60 and above</option>
+                        </select>
+                    </div>
+
+                    <!-- Recommendation Form (purpose selection) -->
+
+                    <div class="form-group">
+                        <label for="dining-purpose">Dining Occasion</label>
+                        <select id="dining-purpose" name="dining-purpose">
+                            <option value="">-- Select --</option>
+                            <option value="family">Family</option>
+                            <option value="date">Date / Couple</option>
+                            <option value="business">Business</option>
+                            <option value="casual">Casual / Friends</option>
+                        </select>
+                    </div>
+
+                    <input type="submit" value="Find Restaurants">
+
+                </form>
+            </div>
+
+            <!-- Results -->
+
+            <div class="recommend-results-wrap">
+                <h2>Recommended for you</h2>
+                <p class="results-placeholder">Your results will appear here once you submit your preferences.</p>
+                <div id="recommendation-results"></div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p class="copyright">© 2026 Famtime. COS10005 Web Development. Tinn Kuljittiprasit</p>
+    </footer>
+
+</body>
+</html>

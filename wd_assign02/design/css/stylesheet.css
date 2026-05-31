@@ -1,0 +1,801 @@
+@font-face {
+    font-family: Sukhumvit;
+    src: url(../fonts/SukhumvitSet-Bold.ttf);
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: Sukhumvit;
+    src: url(../fonts/SukhumvitSet-Text.ttf);
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: Boska;
+    src: url(../fonts/Boska-Variable.ttf);
+}
+
+@font-face {
+    font-family: Boska;
+    src: url(../fonts/Boska-VariableItalic.ttf);
+    font-style: italic;
+}
+
+/* General */
+
+body {
+    background-color: #efefef;
+    font-family: Sukhumvit, sans-serif;
+    font-size: 15px;
+    margin: 0;
+    padding: 0;
+    color: #2b3e1f;
+}
+
+h1 {
+    font-family: Boska, serif;
+    font-style: italic;
+    font-size: 65px;
+    color: #c84003;
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+h2 {
+    font-family: Boska, serif;
+    font-size: 38px;
+    color: #c84003;
+    margin-top: 40px;
+    margin-bottom: 10px;
+}
+
+h3 {
+    font-family: Sukhumvit, sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+    color: #2b3e1f;
+    margin-bottom: 8px;
+}
+
+h4 {
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+
+p {
+    line-height: 1.7;
+    margin-bottom: 12px;
+    text-align: justify;
+}
+
+a {
+    color: #c84003;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    margin: 0;
+}
+
+hr {
+    border: 1px solid #54614b;
+    opacity: 30%;
+    margin: 20px 0;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Navigation  Bar */
+
+nav.navbar {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    background-color: #2b3e1f;
+    display: flex;
+    flex-direction: column;
+}
+
+.nav-logo {
+    font-family: Boska, serif;
+    font-weight: bold;
+    font-size: 22px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: #2b3e1f;
+    border-bottom: 0.2px solid #54614b;
+    padding: 20px;
+}
+
+.nav-logo a {
+    color: #efefef;
+    text-decoration: none;
+}
+
+.nav-logo a:hover {
+    letter-spacing: 0.5px;
+    text-decoration: none;
+}
+
+.nav-links {
+    font-family: Sukhumvit, sans-serif;
+    font-size: 12px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    list-style-type: none;
+    background-color: #2b3e1f;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-links li {
+    flex: 1;
+    display: flex;
+}
+
+.nav-links a {
+    width: 100%;
+    padding: 10px;
+    text-decoration: none;
+    color: #ffffff;
+    text-align: center;
+}
+
+.nav-links a:hover {
+    background-color: #54614b;
+    text-decoration: none;
+}
+
+.nav-links a.active {
+    background-color: #54614b;
+    font-weight: bold;
+}
+
+main {
+    margin-top: 90px;
+    padding: 20px 40px;
+    padding-bottom: 0px;
+}
+
+/* Hero Banner */
+
+.hero {
+    position: relative;
+    width: auto;
+    height: 600px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    margin-left: -40px;
+    margin-right: -40px;
+    margin-top: -80px;
+}
+
+.hero::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #000000;
+    opacity: 60%;
+    z-index: 2;
+}
+
+.hero-img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+    margin: 0;
+}
+
+.hero-content {
+    position: relative;
+    margin-left: 40px;
+    z-index: 3;
+    width: 100%;
+}
+
+.hero-content h1 {
+    color: #ffffff;
+}
+
+.hero-buttons {
+    margin-top: 80px;
+}
+
+/* Buttons */
+
+.btn-primary {
+    background-color: #c84003;
+    color: #ffffff;
+    border: 2px solid #c84003;
+    padding: 10px 30px;
+    font-family: Sukhumvit, sans-serif;
+    font-size: 13px;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.btn-primary:hover {
+    background-color: #a33302;
+    border-color: #a33302;
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.btn-secondary {
+    background-color: #efefef;
+    color: #2b3e1f;
+    border: 2px solid #efefef;
+    padding: 10px 30px;
+    font-family: Sukhumvit, sans-serif;
+    font-size: 13px;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.btn-secondary:hover {
+    background-color: #d0d0d0;
+    border-color: #d0d0d0;
+    color: #2b3e1f;
+    text-decoration: none;
+}
+
+/* Purpose */
+
+.section-purpose {
+    display: grid;
+    grid-template-columns: 55% 40%;
+    column-gap: 70px;
+    margin: 80px 0;
+    align-items: start;
+}
+
+.purpose-text {
+    margin-top: -60px;
+}
+
+.purpose-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: -30px;
+}
+
+.purpose-card {
+    background-color: #ffffff;
+    border-left: 4px solid #949e6a;
+    padding: 15px 20px;
+    padding-top: 0px;
+}
+
+.purpose-card h3 {
+    margin-bottom: 5px;
+}
+
+.purpose-card p {
+    font-size: 13px;
+    color: #54614b;
+    margin: 0;
+    text-align: left;
+}
+
+/* Audience */
+
+.section-audience {
+    margin: 60px 0;
+}
+
+.audience-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 322px);
+    column-gap: 20px;
+    margin-top: 60px;
+}
+
+.audience-card {
+    background-color: #ffffff;
+    border: 1px solid #ffffff;
+}
+
+.audience-card:hover {
+    border-color: #949e6a;
+}
+
+.audience-card-img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    display: block;
+    margin: 0;
+}
+
+.audience-card-body {
+    padding: 15px;
+}
+
+.audience-card-body h3 {
+    font-size: 15px;
+    margin-bottom: 5px;
+}
+
+.audience-card-body p {
+    font-size: 12px;
+    color: #54614b;
+    text-align: left;
+    margin: 0;
+}
+
+/* Footer */
+
+footer {
+    background-color: #2b3e1f;
+    padding: 30px 40px;
+    color: #ffffff;
+    margin-top: 40px;
+    margin-left: -40px;
+    margin-right: -40px;
+    margin-bottom: -20px;
+}
+
+.copyright {
+    font-size: 10px;
+    opacity: 70%;
+    text-align: center;
+    padding-top: 15px;
+    border-top: 1px solid #54614b;
+}
+
+/* Restaurants Page */
+
+.restaurant-listing {
+    display: grid;
+    grid-template-columns: 400px auto;
+    column-gap: 40px;
+    align-items: start;
+    margin: 40px 0;
+}
+
+.restaurant-listing-reverse {
+    grid-template-columns: auto 400px;
+}
+
+.restaurant-listing-reverse .restaurant-listing-img {
+    order: 2;
+}
+
+.restaurant-listing-reverse .restaurant-listing-body {
+    order: 1;
+}
+
+.restaurant-listing-img img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    display: block;
+    margin: 0;
+}
+
+.restaurant-listing-body h2 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.restaurant-listing-body h3 {
+    margin-top: 20px;
+    margin-bottom: 8px;
+}
+
+.dish-list {
+    list-style-type: disc;
+    padding-left: 20px;
+    margin-bottom: 15px;
+}
+
+.dish-list li {
+    font-size: 13px;
+    color: #54614b;
+    margin-bottom: 4px;
+    list-style-type: disc;
+}
+
+.restaurant-meta {
+    background-color: #ffffff;
+    border-left: 4px solid #949e6a;
+    padding: 12px 15px;
+    margin: 30px 0 40px 0;
+}
+
+.restaurant-meta p {
+    font-size: 13px;
+    margin-top: 4px;
+    margin-bottom: 4px;
+    text-align: left;
+}
+
+.restaurant-meta p:last-child {
+    margin-bottom: 0;
+}
+
+.cuisine-tag {
+    display: inline-block;
+    background-color: #c4caac;
+    color: #2b3e1f;
+    font-size: 11px;
+    padding: 3px 10px;
+    margin-bottom: 10px;
+}
+
+/* Recommendations Page */
+
+.section-recommend {
+    display: grid;
+    grid-template-columns: 320px auto;
+    column-gap: 60px;
+    margin: 40px 0;
+    align-items: start;
+}
+
+.recommend-form-wrap h2,
+.recommend-results-wrap h2 {
+    margin-top: 0;
+}
+
+.results-placeholder {
+    color: #949e6a;
+    font-style: italic;
+    font-size: 13px;
+}
+
+.results-placeholder.hidden {
+    display: none;
+}
+
+.rec-card {
+    background-color: #ffffff;
+    border-left: 4px solid #c84003;
+    padding: 20px;
+    margin-bottom: 15px;
+}
+
+.rec-card h3 {
+    margin-bottom: 5px;
+}
+
+.rec-cuisine {
+    font-size: 12px;
+    color: #949e6a;
+    margin-bottom: 8px;
+}
+
+.rec-desc {
+    font-size: 13px;
+    color: #54614b;
+    margin-bottom: 15px;
+}
+
+.no-results {
+    color: #c84003;
+    font-style: italic;
+}
+
+/* Reservation Page */
+ 
+.section-reservation {
+    max-width: 620px;
+    margin: 40px 0;
+}
+ 
+.section-reservation h3 {
+    font-family: Boska, serif;
+    font-size: 24px;
+    color: #c84003;
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+ 
+.deposit-display {
+    background-color: #ffffff;
+    border-left: 4px solid #949e6a;
+    padding: 12px 15px;
+    margin-bottom: 15px;
+}
+ 
+.deposit-display label {
+    font-weight: bold;
+    font-size: 13px;
+    display: block;
+    margin-bottom: 4px;
+}
+ 
+.deposit-amount {
+    font-size: 13px;
+    color: #54614b;
+    margin: 0;
+    text-align: left;
+}
+ 
+.form-hint {
+    font-size: 11px;
+    color: #949e6a;
+    display: block;
+    margin-top: 4px;
+}
+ 
+/* Error Window */
+ 
+.res-error-window {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #ffffff;
+    border: 2px solid #c84003;
+    border-left: 6px solid #c84003;
+    padding: 25px 30px;
+    z-index: 2;
+    min-width: 320px;
+    max-width: 480px;
+}
+ 
+.res-error-window ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    margin-bottom: 15px;
+}
+ 
+.res-error-window li {
+    font-size: 13px;
+    color: #2b3e1f;
+    margin-bottom: 6px;
+    list-style-type: disc;
+}
+ 
+.res-error-btn {
+    display: inline-block;
+    background-color: #c84003;
+    color: #ffffff;
+    border: 2px solid #c84003;
+    padding: 6px 25px;
+    font-size: 13px;
+    font-family: Sukhumvit, sans-serif;
+    text-decoration: none;
+}
+ 
+.res-error-btn:hover {
+    background-color: #a33302;
+    border-color: #a33302;
+    text-decoration: none;
+    color: #ffffff;
+}
+ 
+/* Register Page */
+ 
+.section-register {
+    max-width: 620px;
+    margin: 40px 0;
+}
+ 
+.radio-group,
+.checkbox-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 5px;
+}
+ 
+.radio-label,
+.checkbox-label {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 13px;
+    font-weight: normal;
+    cursor: pointer;
+}
+ 
+.form-buttons {
+    margin-top: 10px;
+}
+
+/* Form */
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    font-size: 13px;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="password"],
+.form-group input[type="tel"],
+.form-group input[type="number"],
+.form-group input[type="date"],
+.form-group input[type="time"],
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #54614b;
+    background-color: #ffffff;
+    font-family: Sukhumvit, sans-serif;
+    font-size: 13px;
+    box-sizing: border-box;
+}
+
+.form-group textarea {
+    height: 80px;
+    resize: vertical;
+}
+
+input[type="submit"] {
+    background-color: #c84003;
+    color: #ffffff;
+    border: 2px solid #c84003;
+    padding: 8px 40px;
+    font-family: Sukhumvit, sans-serif;
+    font-size: 13px;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+input[type="submit"]:hover {
+    background-color: #a33302;
+    border-color: #a33302;
+}
+
+input[type="reset"] {
+    background-color: #efefef;
+    color: #2b3e1f;
+    border: 1px solid #2b3e1f;
+    padding: 8px 40px;
+    font-family: Sukhumvit, sans-serif;
+    font-size: 13px;
+    cursor: pointer;
+    margin-top: 15px;
+    margin-left: 10px;
+}
+
+input[type="reset"]:hover {
+    background-color: #8c8784;
+    color: #ffffff;
+    border-color: #8c8784;
+}
+
+.form-error {
+    color: #c84003;
+    font-size: 12px;
+    display: block;
+    margin-top: 4px;
+}
+
+.input-error {
+    border-color: #c84003;
+}
+
+/* Tablet (768px to 1023px) */
+
+@media (max-width: 1023px) {
+
+    .hero {
+        margin-left: -25px;
+        margin-right: -25px;
+    }
+
+    main {
+        padding: 15px 25px;
+        padding-bottom: 0px;
+    }
+
+    .section-purpose {
+        grid-template-columns: 1fr;
+    }
+
+    .audience-grid {
+        grid-template-columns: repeat(2, 1fr);
+        row-gap: 20px;
+    }
+
+    .restaurant-listing,
+    .restaurant-listing-reverse {
+        grid-template-columns: 1fr;
+    }
+
+    .restaurant-listing-reverse .restaurant-listing-img {
+        order: 0;
+    }
+
+    .restaurant-listing-reverse .restaurant-listing-body {
+        order: 0;
+    }
+
+    .restaurant-listing-img img {
+        height: 250px;
+    }
+
+    .section-recommend {
+        grid-template-columns: 1fr;
+        row-gap: 40px;
+    }
+
+    footer {
+        margin-left: -25px;
+        margin-right: -25px;
+        padding: 25px;
+    }
+}
+
+/* Mobile (767px and below) */
+
+@media (max-width: 767px) {
+
+    .hero {
+        margin-left: -15px;
+        margin-right: -15px;
+    }
+
+    main {
+        padding: 10px 15px;
+        padding-bottom: 0px;
+        margin-top: 100px;
+    }
+
+    h1 {
+        font-size: 42px;
+    }
+
+    h2 {
+        font-size: 28px;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+    }
+
+    .nav-links li {
+        flex: 1 1 50%;
+    }
+
+    .section-purpose {
+        grid-template-columns: 1fr;
+        margin: 20px 0;
+    }
+
+    .audience-grid {
+        grid-template-columns: 1fr;
+        row-gap: 15px;
+    }
+
+    .restaurant-listing-img img {
+        height: 200px;
+    }
+
+    footer {
+        margin-left: -15px;
+        margin-right: -15px;
+        padding: 20px 15px;
+    }
+}

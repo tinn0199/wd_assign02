@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reservations - Famtime</title>
+    <link href="design/css/stylesheet.css" rel="stylesheet">
+    <script src="design/js/script.js"></script>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+
+    <nav class="navbar">
+        <div class="nav-logo">
+            <a href="index.html">Famtime</a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="restaurants.html">Restaurants</a></li>
+            <li><a href="recommendations.html">Recommendations</a></li>
+            <li><a href="reservation.html" class="active">Reservations</a></li>
+            <li><a href="register.html">Sign Up</a></li>
+        </ul>
+    </nav>
+
+    <main>
+
+        <h1>Make a Reservation</h1>
+        <p>Fill in the form below to reserve your table. All fields marked with * are required.</p>
+
+        <hr>
+
+        <!-- Reservation Form (text fields)-->
+
+        <section class="section-reservation">
+            <form id="resform" method="POST" action="http://mercury.swin.edu.au/it000000/cos10005/regtest.php">
+
+                <!-- Personal Details -->
+                <h2>Your Details</h2>
+
+                <div class="form-group">
+                    <label for="fullname">Full Name *</label>
+                    <input type="text" id="fullname" name="fullname" placeholder="e.g. Tinn Kuljittiprasit">
+                </div>
+
+                <div class="form-group">
+                    <label for="res-email">Email Address *</label>
+                    <input type="email" id="res-email" name="email" placeholder="e.g. abc@email.com">
+                </div>
+
+                <div class="form-group">
+                    <label for="res-phone">Phone Number *</label>
+                    <input type="tel" id="res-phone" name="phone" placeholder="e.g. 0123456789">
+                </div>
+
+                <hr>
+
+                <!-- Booking Details -->
+
+                <h2>Booking Details</h2>
+
+                <div class="form-group">
+                    <label for="restaurant">Select Restaurant *</label>
+                    <select id="restaurant" name="restaurant">
+                        <option value="">-- Select a restaurant --</option>
+                        <option value="bella-napoli" data-deposit="20">Bella Napoli ($20 Deposit)</option>
+                        <option value="sakura-zen" data-deposit="30">Sakura Zen ($30 Deposit)</option>
+                        <option value="le-petit-bistro" data-deposit="25">Le Petit Bistro ($25 Deposit)</option>
+                        <option value="spice-garden" data-deposit="15">Spice Garden ($15 Deposit)</option>
+                        <option value="the-smokehouse" data-deposit="20">The Smokehouse ($20 Deposit)</option>
+                        <option value="golden-dragon" data-deposit="15">Golden Dragon ($15 Deposit)</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="res-date">Reservation Date *</label>
+                    <input type="date" id="res-date" name="date">
+                </div>
+
+                <div class="form-group">
+                    <label for="res-time">Reservation Time *</label>
+                    <input type="time" id="res-time" name="time">
+                </div>
+
+                <div class="form-group">
+                    <label for="num-people">Number of People *</label>
+                    <input type="number" id="num-people" name="num-people" min="1" placeholder="e.g. 2">
+                </div>
+
+                <div class="form-group">
+                    <label for="special-requests">Special Requests (optional)</label>
+                    <textarea id="special-requests" name="special-requests" placeholder="Dietary requirements, seating preferences, occasions..."></textarea>
+                </div>
+
+                <hr>
+
+                <!-- Payment -->
+
+                <h2>Payment</h2>
+
+                <div class="form-group">
+                        <label>Deposit Amount</label>
+                        <p>Deposit: <span id="deposit-amount">--</span></p>
+                </div>
+
+                <div class="form-group">
+                    <label>Payment Method *</label>
+                    <div id="payment-group" class="radio-group">
+                        <label class="radio-label">
+                            <input type="radio" name="payment-method" id="pay-voucher" value="voucher"> Voucher
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="payment-method" id="pay-online" value="online"> Online Payment
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Voucher code  -->
+
+                <div class="form-group" id="voucher-section" style="display: none;">
+                    <label for="voucher-code">Voucher Code</label>
+                    <input type="text" id="voucher-code" name="voucher-code" placeholder="12-digit voucher code">
+                </div>
+
+                <!-- Credit card -->
+
+                <div id="card-section" style="display: none;">
+
+                    <div class="form-group">
+                        <label for="card-type">Card Type *</label>
+                        <select id="card-type" name="card-type">
+                            <option value="">-- Select card type --</option>
+                            <option value="visa">Visa</option>
+                            <option value="mastercard">Mastercard</option>
+                            <option value="amex">American Express</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="card-number">Card Number *</label>
+                        <input type="text" id="card-number" name="card-number" placeholder="Digits only, no spaces">
+                        <small class="form-hint">Use fake card numbers for testing. No real processing.</small>
+                    </div>
+
+                </div>
+
+                <hr>
+
+                <!-- Billing email -->
+
+                <h2>Billing</h2>
+
+                <div class="form-group">
+                    <label for="billing-email">Billing Email Address *</label>
+                    <input type="email" id="billing-email" name="billing-email" placeholder="e.g. abc@email.com">
+                </div>
+
+                <div class="form-group">
+                    <label class="checkbox-label">
+                        <input type="checkbox" id="same-email" name="same-email">
+                        Same as email address above
+                    </label>
+                </div>
+
+                <div class="form-buttons">
+                    <input type="submit" value="Confirm Reservation">
+                    <input type="reset" value="Clear">
+                </div>
+
+            </form>
+        </section>
+
+    </main>
+
+    <footer>
+        <p class="copyright">© 2026 Famtime. COS10005 Web Development. Tinn Kuljittiprasit</p>
+    </footer>
+
+</body>
+</html>

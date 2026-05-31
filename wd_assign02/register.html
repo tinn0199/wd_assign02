@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - Famtime</title>
+    <link href="design/css/stylesheet.css" rel="stylesheet">
+    <script src="design/js/script.js"></script>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+
+    <nav class="navbar">
+        <div class="nav-logo">
+            <a href="index.html">Famtime</a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="restaurants.html">Restaurants</a></li>
+            <li><a href="recommendations.html">Recommendations</a></li>
+            <li><a href="reservation.html">Reservations</a></li>
+            <li><a href="register.html" class="active">Sign Up</a></li>
+        </ul>
+    </nav>
+
+    <main>
+
+        <!-- Register -->
+
+        <h1>Create your Account</h1>
+        <p>Join Famtime to start discovering and reserving Melbourne's best restaurants.</p>
+
+        <hr>
+
+        <section class="section-register">
+
+            <!-- Registeration Form (text fields) -->
+
+            <form id="regform" method="POST" action="#">
+
+                <h2>Enter your Details</h2>
+
+                <div class="form-group">
+                    <label>Username</label>
+                    <input type="text" id="username" name="username" placeholder="At least 5 characters, letters/numbers/underscores only">
+                </div>
+
+                <div class="form-group">
+                    <label>Email Address</label>
+                    <input type="email" id="reg-email" name="email" placeholder="e.g. abc@email.com">
+                </div>
+
+                <div class="form-group">
+                    <label>Phone Number</label>
+                    <input type="tel" id="reg-phone" name="phone" placeholder="e.g. 0123456789">
+                </div>
+
+                <div class="form-group">
+                    <label>Password</label>
+                    <input type="password" id="pwd1" name="password" placeholder="At least 10 characters, include uppercase, number and symbol">
+                </div>
+
+                <div class="form-group">
+                    <label>Confirm Password</label>
+                    <input type="password" id="pwd2" name="confirm-password" placeholder="Re-enter your password">
+                </div>
+
+                 <!-- Form (gender selection) -->
+
+                <div class="form-group">
+                    <label>Gender</label>
+                    <div id="gender-group" class="radio-group">
+                        <label class="radio-label">
+                            <input type="radio" id="genm" name="gender" value="male"> Male
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" id="genf" name="gender" value="female"> Female
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" id="geno" name="gender" value="other"> Other
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" id="genp" name="gender" value="prefer-not"> Prefer not to say
+                        </label>
+                    </div>
+                </div>
+
+                 <!-- Form (dietary selection) -->
+
+                <div class="form-group">
+                    <label>Dietary Preferences</label>
+                    <div id="dietary-group" class="checkbox-group">
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="dietary" value="none"> No preference
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="dietary" value="vegan"> Vegan
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="dietary" value="halal"> Halal
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="dietary" value="gluten-free"> Gluten-free
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="dietary" value="vegetarian"> Vegetarian
+                        </label>
+                    </div>
+                </div>
+
+                 <!-- Form (drop down) -->
+
+                <div class="form-group">
+                    <label for="country">Country / Region</label>
+                    <select id="country" name="country">
+                        <option value="">-- Select your country --</option>
+                        <option value="au">Australia</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+
+                <div class="form-buttons">
+                    <input type="submit" value="Create Account">
+                    <input type="reset" value="Clear">
+                </div>
+
+            </form>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p class="copyright">© 2026 Famtime. COS10005 Web Development. Tinn Kuljittiprasit</p>
+    </footer>
+
+</body>
+</html>
